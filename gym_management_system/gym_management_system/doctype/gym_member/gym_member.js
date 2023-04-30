@@ -159,8 +159,6 @@ frappe.ui.form.on('Gym Member', {
 
 
 
-
-
         var child_table = frm.fields_dict.gym_trainer_rating.grid;
 		child_table.wrapper.find(".grid-add-row").addClass("hide");
         
