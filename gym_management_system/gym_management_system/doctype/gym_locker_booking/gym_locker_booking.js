@@ -54,23 +54,23 @@ frappe.ui.form.on('Gym Locker Booking', {
 
     },
 
-    // refresh: function(frm) {
-    //     frm.set_query('locker_number', function() {
-    //         return {
-    //             filters: [
-    //                 ['Gym Locker', 'availability_status', '=', 'Available']
-    //             ]
-    //         };
-    //     });
+    refresh: function(frm) {
+        frm.set_query('locker_number', function() {
+            return {
+                filters: [
+                    ['Gym Locker', 'availability_status', '=', 'Available']
+                ]
+            };
+        });
 
-	// 	frm.set_query('gym_member', function() {
-    //         return {
-    //             filters: [
-	// 				['Gym Member', 'membership_plan', 'is', 'set'],
-    //                 ['Gym Member', 'gym_trainer_subscription_plan', 'is', 'set'],
-	// 				['Gym Member', 'status', '=', 'Active'],
-    //             ]
-    //         };
-    //     });
-    // }
+		frm.set_query('gym_member', function() {
+            return {
+                filters: [
+					['Gym Member', 'membership_plan', 'is', 'set'],
+                    ['Gym Member', 'gym_trainer_subscription_plan', 'is', 'set'],
+					['Gym Member', 'status', '=', 'Active'],
+                ]
+            };
+        });
+    }
 });

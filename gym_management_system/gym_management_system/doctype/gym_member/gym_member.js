@@ -2,56 +2,56 @@
 // For license information, please see license.txt
 
 frappe.ui.form.on('Gym Member', {
-	// first_name: function(frm) {
-    //         if(frm.doc.middle_name){
-    //             if(frm.doc.last_name){
-    //                 frm.set_value("full_name",frm.doc.first_name +" "+frm.doc.middle_name +" "+frm.doc.last_name)
-    //             }
-    //             else{
-    //                 frm.set_value("full_name",frm.doc.first_name +" "+frm.doc.middle_name)
-    //             }
-    //         }
-    //         else if(frm.doc.last_name){
-    //             frm.set_value("full_name",frm.doc.first_name +" "+frm.doc.last_name)
-    //         }
-    //         else {
-    //             frm.set_value("full_name",frm.doc.first_name)
-    //         }
-	// },
+	first_name: function(frm) {
+            if(frm.doc.middle_name){
+                if(frm.doc.last_name){
+                    frm.set_value("full_name",frm.doc.first_name +" "+frm.doc.middle_name +" "+frm.doc.last_name)
+                }
+                else{
+                    frm.set_value("full_name",frm.doc.first_name +" "+frm.doc.middle_name)
+                }
+            }
+            else if(frm.doc.last_name){
+                frm.set_value("full_name",frm.doc.first_name +" "+frm.doc.last_name)
+            }
+            else {
+                frm.set_value("full_name",frm.doc.first_name)
+            }
+	},
 
-	// middle_name: function(frm) {
-    //         if(frm.doc.middle_name){
-    //             if(frm.doc.last_name){
-    //                 frm.set_value("full_name",frm.doc.first_name +" "+frm.doc.middle_name +" "+frm.doc.last_name)
-    //             }
-    //             else{
-    //                 frm.set_value("full_name",frm.doc.first_name +" "+frm.doc.middle_name)
-    //             }
-    //         }
-    //         else if(frm.doc.last_name){
-    //             frm.set_value("full_name",frm.doc.first_name +" "+frm.doc.last_name)
-    //         }
-    //         else {
-    //             frm.set_value("full_name",frm.doc.first_name)
-    //         }
-	// },
+	middle_name: function(frm) {
+            if(frm.doc.middle_name){
+                if(frm.doc.last_name){
+                    frm.set_value("full_name",frm.doc.first_name +" "+frm.doc.middle_name +" "+frm.doc.last_name)
+                }
+                else{
+                    frm.set_value("full_name",frm.doc.first_name +" "+frm.doc.middle_name)
+                }
+            }
+            else if(frm.doc.last_name){
+                frm.set_value("full_name",frm.doc.first_name +" "+frm.doc.last_name)
+            }
+            else {
+                frm.set_value("full_name",frm.doc.first_name)
+            }
+	},
 
-	// last_name: function(frm) {
-    //         if(frm.doc.middle_name){
-    //             if(frm.doc.last_name){
-    //                 frm.set_value("full_name",frm.doc.first_name +" "+frm.doc.middle_name +" "+frm.doc.last_name)
-    //             }
-    //             else{
-    //                 frm.set_value("full_name",frm.doc.first_name +" "+frm.doc.middle_name)
-    //             }
-    //         }
-    //         else if(frm.doc.last_name){
-    //             frm.set_value("full_name",frm.doc.first_name +" "+frm.doc.last_name)
-    //         }
-    //         else {
-    //             frm.set_value("full_name",frm.doc.first_name)
-    //         }
-	// },
+	last_name: function(frm) {
+            if(frm.doc.middle_name){
+                if(frm.doc.last_name){
+                    frm.set_value("full_name",frm.doc.first_name +" "+frm.doc.middle_name +" "+frm.doc.last_name)
+                }
+                else{
+                    frm.set_value("full_name",frm.doc.first_name +" "+frm.doc.middle_name)
+                }
+            }
+            else if(frm.doc.last_name){
+                frm.set_value("full_name",frm.doc.first_name +" "+frm.doc.last_name)
+            }
+            else {
+                frm.set_value("full_name",frm.doc.first_name)
+            }
+	},
     
     membership_type: function(frm) {
         if (frm.doc.membership_plan) {
