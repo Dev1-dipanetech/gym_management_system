@@ -1,0 +1,49 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2023-04-24 21:20:44.104416",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "trainer",
+  "trainer_name",
+  "give_rating_to_the_trainer"
+ ],
+ "fields": [
+  {
+   "fieldname": "trainer",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Trainer",
+   "options": "Gym Trainer Detail",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "trainer.trainer_name",
+   "fieldname": "trainer_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Trainer Name",
+   "read_only": 1
+  },
+  {
+   "fieldname": "give_rating_to_the_trainer",
+   "fieldtype": "Rating",
+   "in_list_view": 1,
+   "label": "Give Rating to the Trainer"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2023-04-26 01:22:10.077561",
+ "modified_by": "Administrator",
+ "module": "Gym Management System",
+ "name": "Gym Trainer Rating",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

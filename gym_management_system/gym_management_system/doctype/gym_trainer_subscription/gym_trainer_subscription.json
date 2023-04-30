@@ -1,0 +1,122 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "format:{subscription_plan} - {####}",
+ "creation": "2023-04-20 22:56:16.111409",
+ "default_view": "List",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "subscription_plan",
+  "subscription_type",
+  "subscription_fee",
+  "column_break_s2onv",
+  "subscription_status",
+  "book_a_cardio_machine",
+  "timing_for_cardio_machine",
+  "column_break_fqtya",
+  "gym_trainer",
+  "section_break_i0ddx",
+  "notes"
+ ],
+ "fields": [
+  {
+   "fieldname": "subscription_plan",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Subscription Plan",
+   "options": "Basic Trainer Plan\nProfessional Trainer Plan",
+   "reqd": 1
+  },
+  {
+   "fieldname": "notes",
+   "fieldtype": "Text Editor",
+   "label": "Notes"
+  },
+  {
+   "fieldname": "column_break_s2onv",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "section_break_i0ddx",
+   "fieldtype": "Section Break"
+  },
+  {
+   "depends_on": "eval:doc.subscription_plan==\"Professional Trainer Plan\";",
+   "description": "If you choose Monthly Plan 5% discount is applicable, or if you choose Quarterly Plan 10% discount is applicable for Professional Trainer Plan",
+   "fieldname": "subscription_type",
+   "fieldtype": "Select",
+   "label": "Subscription Type",
+   "mandatory_depends_on": "eval:doc.subscription_plan==\"Professional Trainer Plan\";",
+   "options": "\nMonthly\nQuarterly"
+  },
+  {
+   "fieldname": "column_break_fqtya",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "gym_trainer",
+   "fieldtype": "Table",
+   "label": "Gym Trainer",
+   "options": "Gym Trainer",
+   "reqd": 1
+  },
+  {
+   "fieldname": "subscription_status",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Subscription Status",
+   "options": "Active\nExpired\nSuspended\nCancelled",
+   "reqd": 1
+  },
+  {
+   "depends_on": "eval:doc.subscription_plan==\"Professional Trainer Plan\";",
+   "fieldname": "book_a_cardio_machine",
+   "fieldtype": "Select",
+   "label": "Book a Cardio Machine",
+   "options": "\nCardio Machine 1\nCardio Machine 2\nCardio Machine 3\nCardio Machine 4\nCardio Machine 5\nCardio Machine 6"
+  },
+  {
+   "depends_on": "eval:doc.subscription_plan==\"Professional Trainer Plan\" && doc.book_a_cardio_machine!=\"\";",
+   "fieldname": "timing_for_cardio_machine",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Timing for Cardio Machine",
+   "options": "Morning 06:00 AM to 07:00 AM\nMorning 07:00 AM to 08:00 AM\nMorning 08:00 AM to 09:00 AM\nEvening 05:00 PM to 06:00 PM\nEvening 06:00 PM to 07:00 PM\nEvening 07:00 PM to 08:00 PM"
+  },
+  {
+   "depends_on": "eval:doc.subscription_plan==\"Professional Trainer Plan\";",
+   "description": "You can set the Subscription Fee in Gym Settings. In default it set it as 800",
+   "fieldname": "subscription_fee",
+   "fieldtype": "Currency",
+   "label": "Subscription Fee",
+   "read_only": 1
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2023-04-30 01:00:55.656547",
+ "modified_by": "Administrator",
+ "module": "Gym Management System",
+ "name": "Gym Trainer Subscription",
+ "naming_rule": "Expression",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

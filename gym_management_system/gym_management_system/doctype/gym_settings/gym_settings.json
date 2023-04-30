@@ -1,0 +1,88 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2023-04-26 17:56:27.425539",
+ "default_view": "List",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "no_of_lockers",
+  "membership_fees_section",
+  "basic_membership_fees",
+  "premium_membership_fees",
+  "column_break_l4bxc",
+  "vip_membership_fees",
+  "trainer_subscription_fees_section",
+  "professional_trainer_plan_fees"
+ ],
+ "fields": [
+  {
+   "description": "You can limit the No of Lockers. In default, it set limit as 10",
+   "fieldname": "no_of_lockers",
+   "fieldtype": "Int",
+   "label": "No of Lockers"
+  },
+  {
+   "description": "You can set the Basic Membership Fee by entering the value in this field. In default, Basic Membership is set it as 500",
+   "fieldname": "basic_membership_fees",
+   "fieldtype": "Currency",
+   "label": "Basic Membership Fees"
+  },
+  {
+   "description": "You can set the Premium Membership Fees by entering the value in this field. In default, Premium Membership Fees is set it as 800",
+   "fieldname": "premium_membership_fees",
+   "fieldtype": "Currency",
+   "label": "Premium Membership Fees"
+  },
+  {
+   "description": "You can set the VIP Membership Fees by entering the value in this field. In default, VIP Membership Fees is set it as 1000",
+   "fieldname": "vip_membership_fees",
+   "fieldtype": "Currency",
+   "label": "VIP Membership Fees"
+  },
+  {
+   "fieldname": "membership_fees_section",
+   "fieldtype": "Section Break",
+   "label": "Membership Fees"
+  },
+  {
+   "fieldname": "column_break_l4bxc",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "trainer_subscription_fees_section",
+   "fieldtype": "Section Break",
+   "label": "Trainer Subscription Fees"
+  },
+  {
+   "description": "You can set the Professional Trainer Plan Fees by entering the value in this field. In default, Professional Trainer Plan Fees is set it as 800",
+   "fieldname": "professional_trainer_plan_fees",
+   "fieldtype": "Currency",
+   "label": "Professional Trainer Plan Fees"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "issingle": 1,
+ "links": [],
+ "modified": "2023-04-30 02:09:29.200140",
+ "modified_by": "Administrator",
+ "module": "Gym Management System",
+ "name": "Gym Settings",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "print": 1,
+   "read": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

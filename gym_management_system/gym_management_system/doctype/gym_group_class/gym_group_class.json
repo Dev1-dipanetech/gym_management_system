@@ -1,0 +1,117 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "field:class_name",
+ "creation": "2023-04-20 23:34:05.012869",
+ "default_view": "List",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "class_name",
+  "class_type",
+  "class_instructor",
+  "class_timing",
+  "column_break_vvlab",
+  "class_capacity",
+  "class_fees",
+  "class_status",
+  "section_break_cnai5",
+  "class_description"
+ ],
+ "fields": [
+  {
+   "allow_in_quick_entry": 1,
+   "fieldname": "class_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Class Name",
+   "reqd": 1,
+   "unique": 1
+  },
+  {
+   "fieldname": "class_description",
+   "fieldtype": "Text",
+   "label": "Class Description"
+  },
+  {
+   "allow_in_quick_entry": 1,
+   "fieldname": "class_type",
+   "fieldtype": "Select",
+   "label": "Class Type",
+   "options": "Cardio\nStrength Training\nYoga\nOther"
+  },
+  {
+   "allow_in_quick_entry": 1,
+   "fieldname": "class_instructor",
+   "fieldtype": "Link",
+   "label": "Class Instructor",
+   "options": "Gym Trainer Detail",
+   "reqd": 1
+  },
+  {
+   "allow_in_quick_entry": 1,
+   "fieldname": "class_capacity",
+   "fieldtype": "Int",
+   "label": "Class Capacity",
+   "reqd": 1
+  },
+  {
+   "allow_in_quick_entry": 1,
+   "fieldname": "class_fees",
+   "fieldtype": "Currency",
+   "in_list_view": 1,
+   "label": "Class Fees",
+   "reqd": 1
+  },
+  {
+   "allow_in_quick_entry": 1,
+   "fieldname": "class_status",
+   "fieldtype": "Select",
+   "label": "Class Status",
+   "options": "Active\nInactive\nCancelled"
+  },
+  {
+   "allow_in_quick_entry": 1,
+   "fieldname": "class_timing",
+   "fieldtype": "Select",
+   "label": "Class Timing",
+   "options": "Morning 06:00 AM to 07:00 AM\nMorning 07:00 AM to 08:00 AM\nMorning 08:00 AM to 09:00 AM\nEvening 05:00 PM to 06:00 PM\nEvening 06:00 PM to 07:00 PM\nEvening 07:00 PM to 08:00 PM",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_vvlab",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "section_break_cnai5",
+   "fieldtype": "Section Break"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2023-04-30 01:40:11.490899",
+ "modified_by": "Administrator",
+ "module": "Gym Management System",
+ "name": "Gym Group Class",
+ "naming_rule": "By fieldname",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "quick_entry": 1,
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

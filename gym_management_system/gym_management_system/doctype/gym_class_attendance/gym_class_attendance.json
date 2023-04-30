@@ -1,0 +1,108 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "format:Class Attendance - {####}",
+ "creation": "2023-04-26 17:05:58.506731",
+ "default_view": "List",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "trainer",
+  "trainer_name",
+  "date",
+  "column_break_vojaz",
+  "class",
+  "timing",
+  "section_break_tqplw",
+  "gym_class_attendance_detail",
+  "amended_from"
+ ],
+ "fields": [
+  {
+   "fieldname": "trainer",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Trainer",
+   "options": "Gym Trainer Detail",
+   "reqd": 1
+  },
+  {
+   "fieldname": "date",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "label": "Date",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_vojaz",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fetch_from": "trainer.trainer_name",
+   "fieldname": "trainer_name",
+   "fieldtype": "Data",
+   "label": "Trainer Name"
+  },
+  {
+   "fieldname": "class",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Class",
+   "options": "Gym Group Class",
+   "reqd": 1
+  },
+  {
+   "fetch_from": "class.class_timing",
+   "fieldname": "timing",
+   "fieldtype": "Data",
+   "label": "Timing"
+  },
+  {
+   "fieldname": "section_break_tqplw",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "gym_class_attendance_detail",
+   "fieldtype": "Table",
+   "label": "Gym Class Attendance Detail",
+   "options": "Gym Class Attendance Detail",
+   "reqd": 1
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Gym Class Attendance",
+   "print_hide": 1,
+   "read_only": 1
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "is_submittable": 1,
+ "links": [],
+ "modified": "2023-04-30 01:45:55.267924",
+ "modified_by": "Administrator",
+ "module": "Gym Management System",
+ "name": "Gym Class Attendance",
+ "naming_rule": "Expression",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

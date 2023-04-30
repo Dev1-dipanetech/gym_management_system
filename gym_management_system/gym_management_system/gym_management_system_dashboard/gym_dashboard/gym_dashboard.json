@@ -1,0 +1,54 @@
+{
+ "cards": [
+  {
+   "card": "Gym Member"
+  },
+  {
+   "card": "Gym Membership Plans"
+  },
+  {
+   "card": "Gym Trainer Subscription Plans"
+  },
+  {
+   "card": "Exercise"
+  },
+  {
+   "card": "Group Class"
+  },
+  {
+   "card": "Lockers"
+  },
+  {
+   "card": "Trainers"
+  },
+  {
+   "card": "Workout Plans"
+  }
+ ],
+ "charts": [
+  {
+   "chart": "Gym Revenue Chart",
+   "width": "Full"
+  },
+  {
+   "chart": "Gym Member",
+   "width": "Half"
+  },
+  {
+   "chart": "Gym Member Fitness Chart",
+   "width": "Half"
+  }
+ ],
+ "creation": "2023-04-29 19:55:23.862045",
+ "dashboard_name": "Gym Dashboard",
+ "docstatus": 0,
+ "doctype": "Dashboard",
+ "idx": 0,
+ "is_default": 1,
+ "is_standard": 1,
+ "modified": "2023-04-29 21:38:03.757625",
+ "modified_by": "Administrator",
+ "module": "Gym Management System",
+ "name": "Gym Dashboard",
+ "owner": "Administrator"
+}

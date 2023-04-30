@@ -1,0 +1,205 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "format:Gym Fitness Track - {####}",
+ "creation": "2023-04-26 10:37:37.354093",
+ "default_view": "List",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "gym_member",
+  "column_break_z9epw",
+  "gym_member_name",
+  "section_break_9wtkf",
+  "date",
+  "column_break_srw2x",
+  "time",
+  "section_break_0ioj1",
+  "calories_intake",
+  "measurement_details_section",
+  "weight_in_kg",
+  "height_in_cm",
+  "chest_in_cm",
+  "waist_in_cm",
+  "column_break_oiahs",
+  "weight_in_lbs",
+  "height_in_inches",
+  "chest_in_inches",
+  "waist_in_inches",
+  "click_to_enter_other_metrics",
+  "other_metrics",
+  "other_metrics_type",
+  "amended_from"
+ ],
+ "fields": [
+  {
+   "fieldname": "date",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "label": "Date",
+   "reqd": 1
+  },
+  {
+   "fieldname": "weight_in_kg",
+   "fieldtype": "Float",
+   "label": "Weight (in kg)",
+   "reqd": 1
+  },
+  {
+   "fieldname": "height_in_cm",
+   "fieldtype": "Float",
+   "label": "Height (in cm)",
+   "reqd": 1
+  },
+  {
+   "fieldname": "chest_in_cm",
+   "fieldtype": "Float",
+   "label": "Chest (in cm)"
+  },
+  {
+   "fieldname": "waist_in_cm",
+   "fieldtype": "Float",
+   "label": "Waist (in cm)"
+  },
+  {
+   "fieldname": "calories_intake",
+   "fieldtype": "Int",
+   "label": "Calories Intake"
+  },
+  {
+   "fieldname": "height_in_inches",
+   "fieldtype": "Float",
+   "label": "Height (in inches)"
+  },
+  {
+   "fieldname": "chest_in_inches",
+   "fieldtype": "Float",
+   "label": "Chest (in inches)"
+  },
+  {
+   "fieldname": "waist_in_inches",
+   "fieldtype": "Float",
+   "label": "Waist (in inches)"
+  },
+  {
+   "default": "0",
+   "fieldname": "click_to_enter_other_metrics",
+   "fieldtype": "Check",
+   "label": "Click to Enter Other Metrics"
+  },
+  {
+   "depends_on": "eval:doc.click_to_enter_other_metrics==1;",
+   "fieldname": "other_metrics",
+   "fieldtype": "Data",
+   "label": "Other Metrics",
+   "mandatory_depends_on": "eval:doc.click_to_enter_other_metrics==1;"
+  },
+  {
+   "depends_on": "eval:doc.click_to_enter_other_metrics==1;",
+   "fieldname": "other_metrics_type",
+   "fieldtype": "Data",
+   "label": "Other Metrics Type",
+   "mandatory_depends_on": "eval:doc.click_to_enter_other_metrics==1;"
+  },
+  {
+   "fieldname": "column_break_oiahs",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "gym_member",
+   "fieldtype": "Link",
+   "label": "Gym Member",
+   "options": "Gym Member",
+   "reqd": 1
+  },
+  {
+   "fetch_from": "gym_member.full_name",
+   "fieldname": "gym_member_name",
+   "fieldtype": "Data",
+   "label": "Gym Member Name",
+   "read_only": 1
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Gym Fitness Tracking",
+   "print_hide": 1,
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_z9epw",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "section_break_9wtkf",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "column_break_srw2x",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "time",
+   "fieldtype": "Time",
+   "label": "Time",
+   "reqd": 1
+  },
+  {
+   "fieldname": "section_break_0ioj1",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "weight_in_lbs",
+   "fieldtype": "Float",
+   "label": "Weight (in lbs)"
+  },
+  {
+   "fieldname": "measurement_details_section",
+   "fieldtype": "Section Break",
+   "label": "Measurement Details"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "is_submittable": 1,
+ "links": [],
+ "modified": "2023-04-30 10:22:04.359211",
+ "modified_by": "Administrator",
+ "module": "Gym Management System",
+ "name": "Gym Fitness Tracking",
+ "naming_rule": "Expression",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Gym Trainer",
+   "select": 1,
+   "share": 1,
+   "submit": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

@@ -1,0 +1,88 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "format:Locker No - {####}",
+ "creation": "2023-04-20 23:19:31.484207",
+ "default_view": "List",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "locker_size",
+  "location",
+  "column_break_ipsin",
+  "availability_status",
+  "occupied_by",
+  "locker_fee"
+ ],
+ "fields": [
+  {
+   "allow_in_quick_entry": 1,
+   "fieldname": "locker_size",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Locker Size",
+   "options": "Small\nMedium\nLarge",
+   "reqd": 1
+  },
+  {
+   "allow_in_quick_entry": 1,
+   "fieldname": "location",
+   "fieldtype": "Data",
+   "label": "Location"
+  },
+  {
+   "fieldname": "availability_status",
+   "fieldtype": "Select",
+   "label": "Availability Status",
+   "options": "Available\nOccupied"
+  },
+  {
+   "allow_in_quick_entry": 1,
+   "fieldname": "locker_fee",
+   "fieldtype": "Currency",
+   "in_list_view": 1,
+   "label": "Locker Fee",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_ipsin",
+   "fieldtype": "Column Break"
+  },
+  {
+   "depends_on": "eval:doc.availability_status==\"Occupied\"",
+   "fieldname": "occupied_by",
+   "fieldtype": "Link",
+   "label": "Occupied By",
+   "mandatory_depends_on": "eval:doc.availability_status==\"Occupied\"",
+   "options": "Gym Member",
+   "read_only": 1
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2023-04-30 01:37:41.654372",
+ "modified_by": "Administrator",
+ "module": "Gym Management System",
+ "name": "Gym Locker",
+ "naming_rule": "Expression",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "quick_entry": 1,
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

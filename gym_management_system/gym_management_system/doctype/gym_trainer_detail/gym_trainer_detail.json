@@ -1,0 +1,147 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "format:TRAINER - {####}",
+ "creation": "2023-04-20 17:59:52.527328",
+ "default_view": "List",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "trainer_name",
+  "date_of_birth",
+  "address",
+  "image",
+  "column_break_ofker",
+  "contact_number",
+  "email",
+  "section_break_fao6m",
+  "trainer_specialization",
+  "other_specialization",
+  "trainer_experience",
+  "column_break_klzfa",
+  "trainer_rating"
+ ],
+ "fields": [
+  {
+   "allow_in_quick_entry": 1,
+   "fieldname": "trainer_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Trainer Name",
+   "reqd": 1
+  },
+  {
+   "allow_in_quick_entry": 1,
+   "fieldname": "date_of_birth",
+   "fieldtype": "Date",
+   "label": "Date of Birth"
+  },
+  {
+   "allow_in_quick_entry": 1,
+   "fieldname": "contact_number",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Contact Number",
+   "reqd": 1
+  },
+  {
+   "allow_in_quick_entry": 1,
+   "description": "This is your Login Email ID.\nTo set the Password, go to the User then Set a Password",
+   "fieldname": "email",
+   "fieldtype": "Data",
+   "label": "Email",
+   "reqd": 1,
+   "set_only_once": 1,
+   "unique": 1
+  },
+  {
+   "allow_in_quick_entry": 1,
+   "fieldname": "trainer_specialization",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Trainer Specialization",
+   "options": "Cardio\nWeightlifting\nYoga\nPilates\nCrossFit\nFunctional Training\nHIIT (High-Intensity Interval Training)\nBoxing\nMartial Arts\nDance Fitness\nGroup Fitness\nPersonal Training\nStretching/Flexibility\nNutrition/Dietitian\nRehabilitation/Physical Therapy\nSports-Specific Training\nSenior Fitness\nPre and Post-Natal Fitness\nWellness/Well-being\nOther"
+  },
+  {
+   "allow_in_quick_entry": 1,
+   "fieldname": "trainer_experience",
+   "fieldtype": "Data",
+   "label": "Trainer Experience"
+  },
+  {
+   "allow_in_quick_entry": 1,
+   "fieldname": "trainer_rating",
+   "fieldtype": "Rating",
+   "label": "Trainer Rating"
+  },
+  {
+   "fieldname": "column_break_ofker",
+   "fieldtype": "Column Break"
+  },
+  {
+   "allow_in_quick_entry": 1,
+   "fieldname": "address",
+   "fieldtype": "Link",
+   "label": "Address",
+   "options": "Address"
+  },
+  {
+   "fieldname": "section_break_fao6m",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "column_break_klzfa",
+   "fieldtype": "Column Break"
+  },
+  {
+   "allow_in_quick_entry": 1,
+   "depends_on": "eval:doc.trainer_specialization == \"Other\";",
+   "fieldname": "other_specialization",
+   "fieldtype": "Data",
+   "label": "Other Specialization",
+   "mandatory_depends_on": "eval:doc.trainer_specialization == \"Other\";"
+  },
+  {
+   "fieldname": "image",
+   "fieldtype": "Attach Image",
+   "hidden": 1,
+   "label": "Image"
+  }
+ ],
+ "image_field": "image",
+ "index_web_pages_for_search": 1,
+ "links": [
+  {
+   "group": "User",
+   "link_doctype": "User",
+   "link_fieldname": "username"
+  }
+ ],
+ "modified": "2023-04-30 10:08:47.718175",
+ "modified_by": "Administrator",
+ "module": "Gym Management System",
+ "name": "Gym Trainer Detail",
+ "naming_rule": "Expression",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "quick_entry": 1,
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "title_field": "trainer_name",
+ "track_changes": 1
+}

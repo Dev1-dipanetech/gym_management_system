@@ -1,0 +1,157 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "format:Gym Locker Booking No - {####}",
+ "creation": "2023-04-20 23:07:26.581939",
+ "default_view": "List",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "gym_member",
+  "email_id",
+  "column_break_cy03b",
+  "gym_member_name",
+  "section_break_s9qhb",
+  "locker_number",
+  "booking_type",
+  "booking_start_date",
+  "booking_end_date",
+  "column_break_mgpnm",
+  "payment_status",
+  "locker_fees",
+  "column_break_bsiip",
+  "booking_notes",
+  "amended_from"
+ ],
+ "fields": [
+  {
+   "description": "You can limit the No of Lockers in Gym Settings. In default, it set limit as 10",
+   "fieldname": "locker_number",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Locker Number",
+   "options": "Gym Locker",
+   "reqd": 1
+  },
+  {
+   "fieldname": "booking_start_date",
+   "fieldtype": "Date",
+   "label": "Booking Start Date",
+   "read_only": 1,
+   "reqd": 1
+  },
+  {
+   "fieldname": "booking_end_date",
+   "fieldtype": "Date",
+   "label": "Booking End Date",
+   "read_only": 1,
+   "reqd": 1
+  },
+  {
+   "fieldname": "booking_notes",
+   "fieldtype": "Text",
+   "label": "Booking Notes"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Gym Locker Booking",
+   "print_hide": 1,
+   "read_only": 1
+  },
+  {
+   "fieldname": "locker_fees",
+   "fieldtype": "Currency",
+   "label": "Locker Fees",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_mgpnm",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_bsiip",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "payment_status",
+   "fieldtype": "Select",
+   "label": "Payment Status",
+   "options": "Unpaid\nPaid",
+   "read_only": 1
+  },
+  {
+   "fieldname": "gym_member",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Gym Member",
+   "options": "Gym Member",
+   "reqd": 1
+  },
+  {
+   "fieldname": "booking_type",
+   "fieldtype": "Select",
+   "label": "Booking Type",
+   "options": "Monthly\nQuarterly",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_cy03b",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fetch_from": "gym_member.full_name",
+   "fieldname": "gym_member_name",
+   "fieldtype": "Data",
+   "label": "Gym Member Name",
+   "read_only": 1
+  },
+  {
+   "fieldname": "section_break_s9qhb",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fetch_from": "gym_member.email_id",
+   "fieldname": "email_id",
+   "fieldtype": "Data",
+   "label": "Email ID",
+   "read_only": 1
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "is_submittable": 1,
+ "links": [
+  {
+   "group": "Gym Invoice",
+   "link_doctype": "Gym Invoice",
+   "link_fieldname": "document_name",
+   "table_fieldname": "gym_invoice_detail"
+  }
+ ],
+ "modified": "2023-04-30 01:55:57.106991",
+ "modified_by": "Administrator",
+ "module": "Gym Management System",
+ "name": "Gym Locker Booking",
+ "naming_rule": "Expression",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

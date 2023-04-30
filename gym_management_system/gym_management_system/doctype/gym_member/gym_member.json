@@ -1,0 +1,391 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "format:GM - {####}",
+ "creation": "2023-04-20 11:35:52.038389",
+ "default_view": "List",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "first_name",
+  "middle_name",
+  "last_name",
+  "full_name",
+  "mobile_no",
+  "address",
+  "column_break_qycis",
+  "gender",
+  "date_of_birth",
+  "status",
+  "email_id",
+  "image",
+  "measurement_detail_section",
+  "weight_in_kg",
+  "height_in_cm",
+  "column_break_aneqp",
+  "weight_in_lbs",
+  "height_in_inches",
+  "section_break_iltn1",
+  "joining_date",
+  "column_break_16t6g",
+  "leaving_date",
+  "section_break_boi9u",
+  "membership_plan",
+  "membership_type",
+  "membership_start_date",
+  "membership_end_date",
+  "column_break_qtlwj",
+  "valid_number_of_days",
+  "membership_status",
+  "payment_due_date",
+  "membership_fees",
+  "trainer__workout_details_tab",
+  "gym_trainer_subscription_plan",
+  "subscription_type",
+  "trainer_subscription_start_date",
+  "trainer_subscription_end_date",
+  "column_break_xbkiy",
+  "cardio_machine",
+  "timing_for_cardio_machine",
+  "subscription_amount",
+  "discount",
+  "total_subscription_amount",
+  "section_break_iav1m",
+  "gym_trainer_rating"
+ ],
+ "fields": [
+  {
+   "fieldname": "first_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "First Name",
+   "reqd": 1
+  },
+  {
+   "fieldname": "middle_name",
+   "fieldtype": "Data",
+   "label": "Middle Name"
+  },
+  {
+   "fieldname": "last_name",
+   "fieldtype": "Data",
+   "label": "Last Name"
+  },
+  {
+   "fieldname": "full_name",
+   "fieldtype": "Data",
+   "label": "Full Name",
+   "read_only": 1
+  },
+  {
+   "fieldname": "mobile_no",
+   "fieldtype": "Phone",
+   "label": "Mobile No"
+  },
+  {
+   "fieldname": "column_break_qycis",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "gender",
+   "fieldtype": "Link",
+   "label": "Gender",
+   "options": "Gender",
+   "reqd": 1
+  },
+  {
+   "fieldname": "date_of_birth",
+   "fieldtype": "Date",
+   "label": "Date Of Birth"
+  },
+  {
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "label": "Status",
+   "options": "Active\nInactive\nSuspended\nLeft",
+   "reqd": 1
+  },
+  {
+   "description": "This is your Login Email ID.\nTo set the Password, go to the User then Set a Password",
+   "fieldname": "email_id",
+   "fieldtype": "Data",
+   "label": "Email ID",
+   "reqd": 1,
+   "set_only_once": 1,
+   "unique": 1
+  },
+  {
+   "fieldname": "joining_date",
+   "fieldtype": "Date",
+   "label": "Joining Date",
+   "reqd": 1
+  },
+  {
+   "collapsible": 1,
+   "fieldname": "section_break_iltn1",
+   "fieldtype": "Section Break",
+   "label": "Joining / Leaving Detail"
+  },
+  {
+   "fieldname": "leaving_date",
+   "fieldtype": "Date",
+   "label": "Leaving Date",
+   "mandatory_depends_on": "eval:doc.status==\"Suspended\" || doc.status==\"Left\";",
+   "read_only_depends_on": "eval:doc.status==\"Active\" || doc.status==\"Inactive\";"
+  },
+  {
+   "fieldname": "column_break_16t6g",
+   "fieldtype": "Column Break"
+  },
+  {
+   "collapsible": 1,
+   "fieldname": "section_break_boi9u",
+   "fieldtype": "Section Break",
+   "label": "Membership Detail"
+  },
+  {
+   "fieldname": "membership_plan",
+   "fieldtype": "Link",
+   "label": "Membership Plan",
+   "options": "Gym Membership",
+   "reqd": 1
+  },
+  {
+   "fieldname": "membership_start_date",
+   "fieldtype": "Date",
+   "label": "Membership Start Date",
+   "read_only": 1
+  },
+  {
+   "fieldname": "membership_end_date",
+   "fieldtype": "Date",
+   "label": "Membership End Date",
+   "read_only": 1
+  },
+  {
+   "fieldname": "address",
+   "fieldtype": "Link",
+   "label": "Address",
+   "options": "Address"
+  },
+  {
+   "fetch_if_empty": 1,
+   "fieldname": "valid_number_of_days",
+   "fieldtype": "Data",
+   "label": "Valid Number Of Days",
+   "read_only": 1
+  },
+  {
+   "fieldname": "membership_status",
+   "fieldtype": "Data",
+   "label": "Membership Status",
+   "read_only": 1
+  },
+  {
+   "description": "Only Professional Trainer Plan has a option to Book a Cardio Machine ",
+   "fieldname": "gym_trainer_subscription_plan",
+   "fieldtype": "Link",
+   "label": "Gym Trainer Subscription Plan",
+   "options": "Gym Trainer Subscription"
+  },
+  {
+   "fieldname": "column_break_qtlwj",
+   "fieldtype": "Column Break"
+  },
+  {
+   "depends_on": "eval:doc.membership_type;",
+   "fieldname": "trainer__workout_details_tab",
+   "fieldtype": "Tab Break",
+   "label": "Gym Trainer Details"
+  },
+  {
+   "fieldname": "payment_due_date",
+   "fieldtype": "Date",
+   "label": "Payment Due Date",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "membership_plan.membership_type",
+   "fieldname": "membership_type",
+   "fieldtype": "Data",
+   "label": "Membership Type",
+   "read_only": 1
+  },
+  {
+   "depends_on": "eval:doc.gym_trainer_subscription_plan;",
+   "fieldname": "gym_trainer_rating",
+   "fieldtype": "Table",
+   "label": "Gym Trainer Rating",
+   "options": "Gym Trainer Rating"
+  },
+  {
+   "fetch_from": "gym_trainer_subscription_plan.subscription_fee",
+   "fieldname": "subscription_amount",
+   "fieldtype": "Currency",
+   "label": "Subscription Amount",
+   "read_only": 1
+  },
+  {
+   "depends_on": "eval:doc.subscription_amount;",
+   "fieldname": "discount",
+   "fieldtype": "Currency",
+   "label": "Discount",
+   "read_only": 1
+  },
+  {
+   "depends_on": "eval:doc.subscription_amount;",
+   "fieldname": "total_subscription_amount",
+   "fieldtype": "Currency",
+   "label": "Total Subscription Amount",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_xbkiy",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "section_break_iav1m",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fetch_from": "membership_plan.membership_fee",
+   "fieldname": "membership_fees",
+   "fieldtype": "Currency",
+   "label": "Membership Fees",
+   "read_only": 1
+  },
+  {
+   "description": "If you choose Monthly Plan 5% discount is applicable, or if you choose Quarterly Plan 10% discount is applicable for Professional Trainer Plan",
+   "fetch_from": "gym_trainer_subscription_plan.subscription_type",
+   "fieldname": "subscription_type",
+   "fieldtype": "Data",
+   "label": "Subscription Type",
+   "read_only": 1
+  },
+  {
+   "depends_on": "eval:doc.subscription_type;",
+   "fieldname": "trainer_subscription_start_date",
+   "fieldtype": "Date",
+   "label": "Trainer Subscription Start Date",
+   "read_only": 1
+  },
+  {
+   "depends_on": "eval:doc.subscription_type;",
+   "fieldname": "trainer_subscription_end_date",
+   "fieldtype": "Date",
+   "label": "Trainer Subscription End Date",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "gym_trainer_subscription_plan.book_a_cardio_machine",
+   "fieldname": "cardio_machine",
+   "fieldtype": "Data",
+   "label": "Cardio Machine",
+   "read_only": 1
+  },
+  {
+   "depends_on": "eval:doc.cardio_machine;",
+   "fetch_from": "gym_trainer_subscription_plan.timing_for_cardio_machine",
+   "fieldname": "timing_for_cardio_machine",
+   "fieldtype": "Data",
+   "label": "Timing For Cardio Machine"
+  },
+  {
+   "fieldname": "measurement_detail_section",
+   "fieldtype": "Section Break",
+   "label": "Measurement Detail"
+  },
+  {
+   "fieldname": "weight_in_kg",
+   "fieldtype": "Float",
+   "label": "Weight (in kg)",
+   "reqd": 1
+  },
+  {
+   "fieldname": "height_in_cm",
+   "fieldtype": "Float",
+   "label": "Height (in cm)",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_aneqp",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "height_in_inches",
+   "fieldtype": "Float",
+   "label": "Height (in inches)"
+  },
+  {
+   "fieldname": "weight_in_lbs",
+   "fieldtype": "Float",
+   "label": "Weight (in lbs)"
+  },
+  {
+   "fieldname": "image",
+   "fieldtype": "Attach Image",
+   "hidden": 1,
+   "label": "Image"
+  }
+ ],
+ "image_field": "image",
+ "index_web_pages_for_search": 1,
+ "links": [
+  {
+   "group": "Fitness Tracking",
+   "link_doctype": "Gym Fitness Tracking",
+   "link_fieldname": "gym_member"
+  },
+  {
+   "group": "Locker Booking",
+   "link_doctype": "Gym Locker Booking",
+   "link_fieldname": "gym_member"
+  },
+  {
+   "group": "Group Class Booking",
+   "link_doctype": "Gym Group Class Booking",
+   "link_fieldname": "gym_member"
+  },
+  {
+   "group": "Gym Invoice",
+   "link_doctype": "Gym Invoice",
+   "link_fieldname": "gym_member"
+  },
+  {
+   "group": "User",
+   "link_doctype": "User",
+   "link_fieldname": "username"
+  },
+  {
+   "group": "Gym Workout Plan",
+   "link_doctype": "Gym Workout Plan",
+   "link_fieldname": "gym_member"
+  }
+ ],
+ "modified": "2023-04-30 09:56:27.402260",
+ "modified_by": "Administrator",
+ "module": "Gym Management System",
+ "name": "Gym Member",
+ "naming_rule": "Expression",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "title_field": "full_name",
+ "track_changes": 1
+}

@@ -1,5 +1,7 @@
 from . import __version__ as app_version
 
+from frappe import _
+
 app_name = "gym_management_system"
 app_title = "Gym Management System"
 app_publisher = "R Surya Prakash"
@@ -9,6 +11,21 @@ app_license = "MIT"
 
 # Includes in <head>
 # ------------------
+
+
+website_route_rules = [
+    # ... your existing routes ...
+    {"from_route": "/404", "to_route": "my_404"},
+]
+
+# Set the 404 page to the custom page we created
+# fixtures = [
+#     {"dt": "Website Settings", "data": {
+#         "page_not_found": "my_404"
+#     }}
+# ]
+
+
 
 # include js, css files in header of desk.html
 # app_include_css = "/assets/gym_management_system/css/gym_management_system.css"

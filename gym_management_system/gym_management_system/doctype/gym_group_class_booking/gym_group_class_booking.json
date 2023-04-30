@@ -1,0 +1,162 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "format:Gym Class Booking No - {####}",
+ "creation": "2023-04-20 23:26:25.660938",
+ "default_view": "List",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "gym_member",
+  "email_id",
+  "column_break_ubuu9",
+  "gym_member_name",
+  "section_break_bnrgx",
+  "gym_group_class",
+  "booking_type",
+  "booking_start_date",
+  "booking_end_date",
+  "column_break_ip2io",
+  "class_timing",
+  "payment_status",
+  "class_fees",
+  "section_break_n4aj5",
+  "booking_notes",
+  "amended_from"
+ ],
+ "fields": [
+  {
+   "fieldname": "payment_status",
+   "fieldtype": "Select",
+   "label": "Payment Status",
+   "options": "Unpaid\nPaid",
+   "read_only": 1
+  },
+  {
+   "fieldname": "booking_notes",
+   "fieldtype": "Text",
+   "label": "Booking Notes"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Gym Group Class Booking",
+   "print_hide": 1,
+   "read_only": 1
+  },
+  {
+   "fieldname": "gym_member",
+   "fieldtype": "Link",
+   "label": "Gym Member",
+   "options": "Gym Member",
+   "reqd": 1
+  },
+  {
+   "fieldname": "booking_type",
+   "fieldtype": "Select",
+   "label": "Booking Type",
+   "options": "Monthly\nQuarterly",
+   "reqd": 1
+  },
+  {
+   "fieldname": "booking_start_date",
+   "fieldtype": "Date",
+   "label": "Booking Start Date",
+   "read_only": 1,
+   "reqd": 1
+  },
+  {
+   "fieldname": "booking_end_date",
+   "fieldtype": "Date",
+   "label": "Booking End Date",
+   "read_only": 1,
+   "reqd": 1
+  },
+  {
+   "fieldname": "class_fees",
+   "fieldtype": "Currency",
+   "label": "Class Fees",
+   "read_only": 1
+  },
+  {
+   "fieldname": "gym_group_class",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Gym Group Class",
+   "options": "Gym Group Class",
+   "reqd": 1
+  },
+  {
+   "fetch_from": "gym_group_class.class_timing",
+   "fieldname": "class_timing",
+   "fieldtype": "Data",
+   "label": "Class Timing"
+  },
+  {
+   "fetch_from": "gym_member.full_name",
+   "fieldname": "gym_member_name",
+   "fieldtype": "Data",
+   "label": "Gym Member Name",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_ubuu9",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "section_break_bnrgx",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "column_break_ip2io",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "section_break_n4aj5",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fetch_from": "gym_member.email_id",
+   "fieldname": "email_id",
+   "fieldtype": "Data",
+   "label": "Email ID",
+   "read_only": 1
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "is_submittable": 1,
+ "links": [
+  {
+   "group": "Gym Invoice",
+   "link_doctype": "Gym Invoice",
+   "link_fieldname": "document_name",
+   "table_fieldname": "gym_invoice_detail"
+  }
+ ],
+ "modified": "2023-04-28 23:44:39.245381",
+ "modified_by": "Administrator",
+ "module": "Gym Management System",
+ "name": "Gym Group Class Booking",
+ "naming_rule": "Expression",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

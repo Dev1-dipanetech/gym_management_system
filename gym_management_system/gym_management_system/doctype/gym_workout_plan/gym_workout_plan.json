@@ -1,0 +1,136 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "format:Gym Workout Plan - {####}",
+ "creation": "2023-04-20 19:24:16.993213",
+ "default_view": "List",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "gym_member",
+  "column_break_ysdvs",
+  "member_name",
+  "section_break_v6ps1",
+  "gym_trainer",
+  "plan_type",
+  "plan_duration",
+  "plan_difficulty",
+  "column_break_c5q5b",
+  "trainer_name",
+  "plan_status",
+  "section_break_rjudr",
+  "plan_exercises",
+  "description"
+ ],
+ "fields": [
+  {
+   "fieldname": "plan_type",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Plan Type",
+   "options": "Beginner\nIntermediate\nAdvanced",
+   "reqd": 1
+  },
+  {
+   "fieldname": "plan_duration",
+   "fieldtype": "Select",
+   "label": "Plan Duration",
+   "options": "1 Month\n2 Months\n3 Months\n6 Months"
+  },
+  {
+   "fieldname": "plan_difficulty",
+   "fieldtype": "Select",
+   "label": "Plan Difficulty",
+   "options": "Easy\nModerate\nDifficult"
+  },
+  {
+   "fieldname": "plan_exercises",
+   "fieldtype": "Table",
+   "label": "Plan Exercises",
+   "options": "Gym Workout Plan Exercise",
+   "reqd": 1
+  },
+  {
+   "fieldname": "description",
+   "fieldtype": "Text Editor",
+   "label": "Description"
+  },
+  {
+   "fieldname": "column_break_c5q5b",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "section_break_rjudr",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "plan_status",
+   "fieldtype": "Select",
+   "label": "Plan Status",
+   "options": "Active\nInactive",
+   "reqd": 1
+  },
+  {
+   "fieldname": "gym_member",
+   "fieldtype": "Link",
+   "label": "Gym Member",
+   "options": "Gym Member",
+   "reqd": 1
+  },
+  {
+   "fieldname": "gym_trainer",
+   "fieldtype": "Link",
+   "label": "Gym Trainer",
+   "options": "Gym Trainer Detail",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_ysdvs",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fetch_from": "gym_member.full_name",
+   "fieldname": "member_name",
+   "fieldtype": "Data",
+   "label": "Member Name",
+   "read_only": 1
+  },
+  {
+   "fieldname": "section_break_v6ps1",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fetch_from": "gym_trainer.trainer_name",
+   "fieldname": "trainer_name",
+   "fieldtype": "Data",
+   "label": "Trainer Name",
+   "read_only": 1
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2023-04-28 16:46:18.924167",
+ "modified_by": "Administrator",
+ "module": "Gym Management System",
+ "name": "Gym Workout Plan",
+ "naming_rule": "Expression",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}
