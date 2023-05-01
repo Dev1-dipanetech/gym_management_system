@@ -53,7 +53,7 @@
   },
   {
    "fieldname": "description",
-   "fieldtype": "Text Editor",
+   "fieldtype": "Text",
    "label": "Description"
   },
   {
@@ -110,7 +110,7 @@
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2023-04-28 16:46:18.924167",
+ "modified": "2023-05-01 10:26:09.669434",
  "modified_by": "Administrator",
  "module": "Gym Management System",
  "name": "Gym Workout Plan",
